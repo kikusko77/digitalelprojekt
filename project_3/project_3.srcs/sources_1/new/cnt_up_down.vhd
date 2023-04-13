@@ -1,54 +1,67 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-
+-- Define the inputs and outputs of the module
 entity cnt_up_down is
-    generic(
-        g_CNT_WIDTH : natural := 4 -- Number of bits for counter
+    port (
+        clock   : in  std_logic;     -- clock input
+        reset   : in  std_logic;     -- reset input
+        start   : in  std_logic;     -- start input
+        rounds  : in  integer range 0 to 255;   -- number of rounds input
+        minutes : in  integer range 0 to 255;   -- number of minutes input
+        pause   : in  integer range 0 to 255;   -- pause time input
+      
     );
-    port(
-        clk      : in  std_logic;  -- Main clock
-        reset    : in  std_logic;  -- Synchronous reset
-        en_i     : in  std_logic;  -- Enable input
-        cnt_up_i : in  std_logic;  -- Direction of the counter
-        cnt_os   : out std_logic_vector(g_CNT_WIDTH - 1 downto 0);
-        cnt_o    : out std_logic
-    );
-end entity cnt_up_down;
+end cnt_up_down;
 
-architecture behavioral of cnt_up_down is
-
-    -- Local counter
-    signal s_cnt_local : unsigned(g_CNT_WIDTH - 1 downto 0);
+-- Implement the logic for the Tabata counter
+architecture Behavioral of cnt_up_down is
+    signal round_cnt   : integer range 0 to 255 := 0;  -- round counter
+    signal minute_cnt  : integer range 0 to 255 := 0;  -- minute counter
+    signal pause_cnt   : integer range 0 to 255 := 0;  -- pause counter
+    signal state       : integer range 0 to 3   := 0  -- state machine state
 begin
-    p_cnt_up_down : process(clk)
+    -- State machine for counting rounds, minutes, and pause time
+    process (clock, reset)
     begin
-        
-        if rising_edge(clk) then        
-            if (reset = '1') then   -- Synchronous reset
-                s_cnt_local <= (others => '0'); -- Clear all bits
-            elsif (en_i = '1') then -- Test if counter is enabled
-                  s_cnt_local <= (others => '0');
-                if (cnt_up_i = '1') then                             
-                    if (s_cnt_local(0) = '0') and (s_cnt_local(1) = '0' ) and (s_cnt_local(2) = '0' ) and (s_cnt_local(3) = '1' ) then
-                        s_cnt_local <= s_cnt_local + 1;
-                        cnt_o <= '1';
-                    elsif (s_cnt_local(0) = '1') and (s_cnt_local(1) = '0' ) and (s_cnt_local(2) = '0' ) and (s_cnt_local(3) = '1' ) then
-                        s_cnt_local <= (others => '0'); -- Clear all bits
-                        cnt_o <= '0';
+        if reset = '1' then
+            -- Reset all counters and state machine state
+            round_cnt   <= 0;
+            minute_cnt  <= 0;
+            pause_cnt   <= 0;
+            state       <= 0;
+        elsif rising_edge(clock) then
+            -- Increment counters based on state machine state
+            case state is
+                when 0 =>   -- round countdown
+                    if start = '1' then
+                        if round_cnt < rounds - 1 then
+                            round_cnt <= round_cnt + 1;
+                        else
+                            state <= 1;
+                            round_cnt <= 0;
+                        end if;
+                    end if;
+                when 1 =>   -- pause countdown
+                    if pause_cnt < pause - 1 then
+                        pause_cnt <= pause_cnt + 1;
                     else
-                        s_cnt_local <= s_cnt_local + 1;
-                        cnt_o <= '0';  
-                    end if;      
-                else             
-                    s_cnt_local <= s_cnt_local ;
-                end if;
-                
-            end if;
+                        state <= 2;
+                        pause_cnt <= 0;
+                    end if;
+                when 2 =>   -- work countdown
+                    if start = '1' then
+                        if minute_cnt < minutes - 1 then
+                            minute_cnt <= minute_cnt + 1;
+                        else
+                            state <= 3;
+                            minute_cnt <= 0;
+                        end if;
+                    end if;
+                when 3 =>   -- pause countdown
+                    if pause_cnt < pause - 1 then
+                        pause_cnt <= pause_cnt + 1;
+                    else
+                        state <= 0;
+                        pause_cnt <= 0;
+                    end if;
+            end case;
         end if;
-    end process p_cnt_up_down;
-    
-    -- Output must be retyped from "unsigned" to "std_logic_vector"
-    cnt_os <= std_logic_vector(s_cnt_local);
-    
-end architecture behavioral;
+    end process;
