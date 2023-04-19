@@ -11,3 +11,4 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/project_4/project_4.xpr
+update_compile_order -fileset sources_1

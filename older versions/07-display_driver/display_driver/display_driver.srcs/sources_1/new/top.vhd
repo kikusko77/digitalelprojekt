@@ -56,10 +56,10 @@ begin
   --------------------------------------------------------
   -- Instance (copy) of driver_7seg_4digits entity
   --------------------------------------------------------
-  Tabata_Counter : entity work.Tabata_Counter
+  driver_seg_4 : entity  work.driver_7seg_4digits
       port map (
-          clock      => CLK100MHZ,
-          reset      => BTNC,
+          clk      => CLK100MHZ,
+          rst      => BTNC,
           data3(3) => SW(15),
           data3(2) => SW(14),
           data3(1) => SW(13),
@@ -89,7 +89,7 @@ begin
           dp      => DP,
 
           -- DIGITS
-          dig(3 downto 0) => AN(3 downto 0)
+          dig(7 downto 0) => AN(7 downto 0)
       );
 
   --------------------------------------------------------
