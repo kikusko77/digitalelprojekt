@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 19 20:45:55 2023
+# Process ID: 10132
+# Current directory: C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/07-display_driver/display_driver
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10592 C:\Users\ChristianKu\Desktop\de1\digitalelprojekt\older versions\07-display_driver\display_driver\display_driver.xpr
+# Log file: C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/07-display_driver/display_driver/vivado.log
+# Journal file: C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/07-display_driver/display_driver\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/07-display_driver/display_driver/display_driver.xpr}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

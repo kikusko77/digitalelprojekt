@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Apr 18 12:36:06 2023
+# Process ID: 19320
+# Current directory: C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/project_4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17244 C:\Users\ChristianKu\Desktop\de1\digitalelprojekt\project_4\project_4.xpr
+# Log file: C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/project_4/vivado.log
+# Journal file: C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/project_4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/project_4/project_4.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Filip/Desktop/vivado kokotiny/project_4' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/project_4/project_4.gen/sources_1', nor could it be found using path 'C:/Users/Filip/Desktop/vivado kokotiny/project_4/project_4.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:nexys-a7-50t:part0:1.3. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/APPZ/Xilinx/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 18 12:38:24 2023...

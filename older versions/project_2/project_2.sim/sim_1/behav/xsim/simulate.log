@@ -1,6 +1,0 @@
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_timer/p_stimulus  File: C:/Users/Filip/Desktop/vivado kokotiny/project_2/project_2.srcs/sim_1/new/tb_timer.vhd
-Note: Stimulus process finished
-Time: 0 ps  Iteration: 0  Process: /tb_timer/p_stimulus  File: C:/Users/Filip/Desktop/vivado kokotiny/project_2/project_2.srcs/sim_1/new/tb_timer.vhd

@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../project_2.srcs/sim_1/new/timer.vhd" \
-"../../../../project_2.srcs/sim_1/new/tb_timer.vhd" \
-
-# Do not sort compile order
-nosort
