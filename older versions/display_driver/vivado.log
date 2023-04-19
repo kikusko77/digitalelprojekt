@@ -1,0 +1,226 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 19 22:55:05 2023
+# Process ID: 9640
+# Current directory: C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7132 C:\Users\ChristianKu\Desktop\de1\digitalelprojekt\older versions\display_driver\display_driver.xpr
+# Log file: C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/vivado.log
+# Journal file: C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/07-display_driver/display_driver' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.gen/sources_1', nor could it be found using path 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/07-display_driver/display_driver/display_driver.gen/sources_1'.
+WARNING: [Project 1-312] File not found as 'C:/Users/ChristianKu/de11/digital-electronics-1/labs/07-display_driver/display_driver/display_driver.srcs/sources_1/new/driver_7seg_4digits.vhd'; using path 'C:/Users/ChristianKu/Desktop/de11/digital-electronics-1/labs/07-display_driver/display_driver/display_driver.srcs/sources_1/new/driver_7seg_4digits.vhd' instead.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/APPZ/Xilinx/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj top_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.srcs/sources_1/new/cnt_up_down.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cnt_up_down'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.srcs/sources_1/new/hex_7seg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'hex_7seg'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.srcs/sources_1/new/top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim'
+"xelab -wto 294b8495cac64087b8a4012353919c30 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_behav xil_defaultlib.top -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 294b8495cac64087b8a4012353919c30 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_behav xil_defaultlib.top -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-921] index value 7 is out of range 3 downto 0 [C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.srcs/sources_1/new/top.vhd:92]
+ERROR: [VRFC 10-3599] not all partial formals of 'dig' have actual [C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.srcs/sources_1/new/top.vhd:61]
+ERROR: [VRFC 10-974] left bound value <7> of slice is out of range [3:0] of array [C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.srcs/sources_1/new/top.vhd:92]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit top in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj top_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.srcs/sources_1/new/top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim'
+"xelab -wto 294b8495cac64087b8a4012353919c30 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_behav xil_defaultlib.top -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 294b8495cac64087b8a4012353919c30 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_behav xil_defaultlib.top -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=400000)\]
+Compiling architecture behavioral of entity xil_defaultlib.cnt_up_down [\cnt_up_down(g_cnt_width=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.hex_7seg [hex_7seg_default]
+Compiling architecture behavioral of entity xil_defaultlib.driver_7seg_4digits [driver_7seg_4digits_default]
+Compiling architecture behavioral of entity xil_defaultlib.top
+Built simulation snapshot top_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older -notrace
+couldn't read file "C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Wed Apr 19 22:56:23 2023...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "top_behav -key {Behavioral:sim_1:Functional:top} -tclbatch {top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 998.730 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top Tabata_Counter_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Tabata_Counter_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Tabata_Counter_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.srcs/sources_1/new/Tabata_Counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Tabata_Counter'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.srcs/sim_1/new/tb_Tabata_Counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Tabata_Counter_TB'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim'
+"xelab -wto 294b8495cac64087b8a4012353919c30 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Tabata_Counter_TB_behav xil_defaultlib.Tabata_Counter_TB -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 294b8495cac64087b8a4012353919c30 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Tabata_Counter_TB_behav xil_defaultlib.Tabata_Counter_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2335] case statement does not cover all choices. 'others' clause is needed [C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.srcs/sources_1/new/Tabata_Counter.vhd:32]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit tabata_counter_tb in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Tabata_Counter_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Tabata_Counter_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.srcs/sources_1/new/Tabata_Counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Tabata_Counter'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim'
+"xelab -wto 294b8495cac64087b8a4012353919c30 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Tabata_Counter_TB_behav xil_defaultlib.Tabata_Counter_TB -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 294b8495cac64087b8a4012353919c30 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Tabata_Counter_TB_behav xil_defaultlib.Tabata_Counter_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Tabata_Counter [tabata_counter_default]
+Compiling architecture behavioral of entity xil_defaultlib.tabata_counter_tb
+Built simulation snapshot Tabata_Counter_TB_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older -notrace
+couldn't read file "C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Wed Apr 19 23:12:50 2023...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Tabata_Counter_TB_behav -key {Behavioral:sim_1:Functional:Tabata_Counter_TB} -tclbatch {Tabata_Counter_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source Tabata_Counter_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Tabata_Counter_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 998.730 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 19 23:14:41 2023...

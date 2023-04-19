@@ -1,0 +1,9 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 294b8495cac64087b8a4012353919c30 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_behav xil_defaultlib.top -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-921] index value 7 is out of range 3 downto 0 [C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/07-display_driver/display_driver/display_driver.srcs/sources_1/new/top.vhd:92]
+ERROR: [VRFC 10-3599] not all partial formals of 'dig' have actual [C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/07-display_driver/display_driver/display_driver.srcs/sources_1/new/top.vhd:61]
+ERROR: [VRFC 10-974] left bound value <7> of slice is out of range [3:0] of array [C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/07-display_driver/display_driver/display_driver.srcs/sources_1/new/top.vhd:92]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit top in library work failed.

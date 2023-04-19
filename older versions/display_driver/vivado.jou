@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 19 22:55:05 2023
+# Process ID: 9640
+# Current directory: C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7132 C:\Users\ChristianKu\Desktop\de1\digitalelprojekt\older versions\display_driver\display_driver.xpr
+# Log file: C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/vivado.log
+# Journal file: C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/older versions/display_driver/display_driver.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source top.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Tabata_Counter_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+source Tabata_Counter_TB.tcl
+close_sim
