@@ -1,8 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/project_4/project_4.srcs/sources_1/new/hex_7seg.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'hex_7seg'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/project_4/project_4.srcs/sources_1/new/timer.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'timer'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/project_4/project_4.srcs/sources_1/new/timer_7seg.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'timer_7seg'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/project_4/project_4.srcs/sources_1/new/tb_timer_7seg.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_timer_7seg'
