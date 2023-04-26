@@ -2,7 +2,6 @@
 
 library ieee;
   use ieee.std_logic_1164.all;
-  use ieee.numeric_std.all;
 
 
 
@@ -19,38 +18,41 @@ end entity hex_7seg_k;
 ----------------------------------------------------------
 
 architecture behavioral of hex_7seg_k is
- signal ones : integer range 0 to 9;
- signal hex_int : integer range 0 to 20;
+
 begin
 
-hex_int <= to_integer(unsigned(hex));
+  p_7seg_decoder : process (blank, hex) is
 
-   
-    ones <= hex_int mod 10;
+  begin
 
-   p_7seg_decoder : process (blank,ones) is
-    begin
-        if (blank = '1') then
-            seg <= "1111111";
-            
-        else
-            
-            
+    if (blank = '1') then
+      seg <= "1111111";     -- Blanking display
+    else
 
-            case ones is
-                when 0 => seg <= "0000001";
-                when 1 => seg <= "1001111";
-                when 2 => seg <= "0010010";
-                when 3 => seg <= "0000110";
-                when 4 => seg <= "1001100";
-                when 5 => seg <= "0100100";
-                when 6 => seg <= "0100000";
-                when 7 => seg <= "0001111";
-                when 8 => seg <= "0000000";
-                when 9 => seg <= "0000100";
-                when others => null;
-            end case;
-         end if;
+      case hex is
+
+        when "00" =>
+          seg <= "0000001"; -- 0
+
+        when "01" =>
+          seg <= "1001111"; -- 1
+
+        -- WRITE YOUR CODE HERE
+        -- 2, 3, 4, 5, 6, 7
+
+        when "10" =>
+          seg <= "0010010"; -- 2
+
+        when "11" =>
+          seg <= "0000110"; -- 3
+
+        when others =>
+          seg <= "1111111"; -- F
+
+      end case;
+
+    end if;
+
   end process p_7seg_decoder;
 
 end architecture behavioral;
