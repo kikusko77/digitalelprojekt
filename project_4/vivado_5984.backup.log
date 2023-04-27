@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 26 14:48:05 2023
+# Process ID: 5984
+# Current directory: C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/project_4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7900 C:\Users\ChristianKu\Desktop\de1\digitalelprojekt\project_4\project_4.xpr
+# Log file: C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/project_4/vivado.log
+# Journal file: C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/project_4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/project_4/project_4.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Filip/Desktop/VUT/2. roèník/2. semester/DE1/projekt/digitalelprojekt/project_4' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/ChristianKu/Desktop/de1/digitalelprojekt/project_4/project_4.gen/sources_1', nor could it be found using path 'C:/Users/Filip/Desktop/VUT/2. roèník/2. semester/DE1/projekt/digitalelprojekt/project_4/project_4.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/APPZ/Xilinx/Vivado/2020.2/data/ip'.

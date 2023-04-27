@@ -1,6 +1,6 @@
-webtalk_init -webtalk_dir C:/Users/240233/Documents/digitalelprojekt/project_4/project_4.sim/sim_1/behav/xsim/xsim.dir/tb_timer_7seg_behav/webtalk/
+webtalk_init -webtalk_dir C:/Users/240856/Documents/digitalelprojekt/digitalelprojekt/project_4/project_4.sim/sim_1/behav/xsim/xsim.dir/tb_timer_7seg_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Thu Apr 20 12:33:31 2023" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Thu Apr 27 13:07:15 2023" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2020.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "3064766" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -12,9 +12,9 @@ webtalk_add_data -client project -key target_family -value "not_applicable" -con
 webtalk_add_data -client project -key target_device -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key target_package -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
-webtalk_add_data -client project -key random_id -value "3099763f-b21f-4fb5-bc5f-ee3ab593bb4b" -context "software_version_and_target_device"
+webtalk_add_data -client project -key random_id -value "91f57c7f-0beb-4145-aa30-d7d27c3e23d4" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "eb7cbba38b5b4341b8602c9ab87bc0f7" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "45" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "50" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Windows Server 2016 or Windows 10" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i3-9100 CPU @ 3.60GHz" -context "user_environment"
@@ -26,7 +26,7 @@ webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
 webtalk_add_data -client xsim -key runtime -value "1 us" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "2" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "0.05_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "6744_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1558808528 -regid "" -xml C:/Users/240233/Documents/digitalelprojekt/project_4/project_4.sim/sim_1/behav/xsim/xsim.dir/tb_timer_7seg_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/240233/Documents/digitalelprojekt/project_4/project_4.sim/sim_1/behav/xsim/xsim.dir/tb_timer_7seg_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/240233/Documents/digitalelprojekt/project_4/project_4.sim/sim_1/behav/xsim/xsim.dir/tb_timer_7seg_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Time -value "0.03_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "6724_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 3586500281 -regid "" -xml C:/Users/240856/Documents/digitalelprojekt/digitalelprojekt/project_4/project_4.sim/sim_1/behav/xsim/xsim.dir/tb_timer_7seg_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/240856/Documents/digitalelprojekt/digitalelprojekt/project_4/project_4.sim/sim_1/behav/xsim/xsim.dir/tb_timer_7seg_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/240856/Documents/digitalelprojekt/digitalelprojekt/project_4/project_4.sim/sim_1/behav/xsim/xsim.dir/tb_timer_7seg_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

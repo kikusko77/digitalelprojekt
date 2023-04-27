@@ -24,8 +24,26 @@ architecture behavioral of timer is
   signal sig_cnt1 : unsigned(g_CNT_WIDTH downto 0) := to_unsigned(g_CNT1_INIT, 10); --! Local first counter with initial value of g_CNT1_INIT
   signal sig_cnt2 : unsigned(g_CNT_WIDTH downto 0) := to_unsigned(g_CNT2_INIT, 10); --! Local second counter with initial value of g_CNT2_INIT
   signal sig_cycle_count: unsigned(1 downto 0) := to_unsigned(3, 2);                         --! Cycle count
+  signal sig_en : std_logic;  
+
 
 begin
+
+ clk_en0 : entity work.clock_enable
+    generic map (
+      -- FOR SIMULATION, KEEP THIS VALUE TO 1
+      -- FOR IMPLEMENTATION, CALCULATE VALUE: 250 ms / (1/100 MHz)
+      -- 1   @ 10 ns
+      -- ??? @ 250 ms
+      g_MAX => 500000000
+    )
+    port map (
+      clk => clk,
+      rst => rst,
+      ce  => sig_en
+    );
+
+
 
  p_timer: process(clk)
  
@@ -36,7 +54,7 @@ begin
         sig_cnt1 <= (others => '0'); -- Clear all bits of first counter
         sig_cnt2 <= (others => '0'); -- Clear all bits of second counter
         sig_cycle_count <= (others => '0');          -- Reset cycle count
-      elsif (en = '1' and sig_cycle_count < g_NUM_CYCLES) then         -- Test if counter is enabled and cycle count is less than g_NUM_CYCLES
+      elsif (en = '1' and sig_cycle_count < g_NUM_CYCLES and sig_en = '1') then     -- Test if counter is enabled and cycle count is less than g_NUM_CYCLES
         if sig_cnt1 = 0 then                                       -- Test if first counter has reached zero
           if sig_cnt2 = 0 then                                     -- Test if second counter has reached zero
             sig_cnt1 <= to_unsigned(g_CNT1_INIT, 10);              -- Reset first counter to initial value of g_CNT1_INIT
