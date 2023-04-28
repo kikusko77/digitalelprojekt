@@ -5,7 +5,7 @@
 ### Team members
 
 * Filip Frey (zodpovědný za správné fungování odpočtu časovače)
-* Christian Kuric (zpodpovědný za zobrazení odpočtu na displeji)
+* Christian Kuric (zodpovědný za zobrazení odpočtu na displeji)
 * Jakub Raimr (zodpovědný za dokumantaci k projektu)
 
 + všichni se podíleli na tvoření kódu, implementace na desku a na dalších úkolech během hodin cvičení na počítači
