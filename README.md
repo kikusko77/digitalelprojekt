@@ -796,11 +796,11 @@ set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { SW[0] 
 
 Na snímku obrazovky níže můžeme pozorovat, jak funguje funkce našeho časovače. Při aktivaci tlačítka enable začne postupný odpočet kola. Jakmile kolo skončí, začne se odčítávat pauza. Po skončení pauzy se přičte počet kol a celý proces se opakuje.
 
-
+![Capture](https://user-images.githubusercontent.com/95495159/235148465-c7c22338-cda8-4edf-b740-eeb164a91847.png)
 
 ## Instructions
 
-Časovač se zobrazuje v plné šíři osmi 7mi-segmentových číslic, v prvních 2 číslicích vlevo lze pozorovat počet kol, uprostřed se zobrazuje odpočítávání kola a úplně vpravo se zobrazuje odpočet kola. Časovač má předem nastavené 3 kola s délkou 20 sekund a pevně nastavenou pauzu 10 sekund. Počet kol a délku kola lze nastavit pomocí switchů zprava doleva. První 4 switche slouží k nastavení délky kola a následující 4 switche slouží k nastavení počtu kol. Přepnutím switche do vrchní polohy přidáváme čas či počet kol. V každé sekci (pro počet kol a čas kola) se vpravo nachází nejmenší možný přídavek kola / času a vlevo se nachází nejvyšší možný přídavek kol / času. Pro zvýšení požadovaného parametru musíme switch přepnout do vrchní polohy, naopak pro snížení musí switch zůstat ve spodní poloze. Jakmile jsme nastavili požadovaný počet kol a čas kola, odpočet lze spustit tlačítkem BTNL (tlačítko vlevo od středu). Pokud jsme nechtěně nastavili špatný čas kola či počet kol, odpočet lze resetovat prostředním tlačítkem BTNC. Časovač se může hodit pro cvičení v sériích, nebo může posloužit jako "minutka" při vaření v kuchyni.
+Časovač se zobrazuje v plné šíři osmi 7mi-segmentových číslic, v prvních 2 číslicích vlevo lze pozorovat počet kol, uprostřed se zobrazuje odpočítávání pauzy a úplně vpravo se zobrazuje odpočet kola. Časovač má předem nastavené 3 kola s délkou 20 sekund a pevně nastavenou pauzu 10 sekund. Počet kol a délku kola lze nastavit pomocí switchů zprava doleva. První 4 switche slouží k nastavení délky kola a následující 4 switche slouží k nastavení počtu kol. Přepnutím switche do vrchní polohy přidáváme čas či počet kol. V každé sekci (pro počet kol a čas kola) vpravo se nachází nejmenší možný přídavek kola / času a vlevo se nachází nejvyšší možný přídavek kol / času. Pro zvýšení požadovaného parametru musíme switch přepnout do vrchní polohy, naopak pro snížení musí switch zůstat ve spodní poloze. Jakmile jsme nastavili požadovaný počet kol a čas kola, odpočet lze spustit tlačítkem BTNL (tlačítko vlevo od středu). Pokud jsme nechtěně nastavili špatný čas kola či počet kol, odpočet lze resetovat prostředním tlačítkem BTNC. Časovač se může hodit pro cvičení v sériích, nebo může posloužit jako "minutka" při vaření v kuchyni.
 
 ## References
 
