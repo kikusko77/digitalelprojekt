@@ -41,7 +41,7 @@ Pro realizaci našeho časovače jsme použili desku Nexys A7 Artix-7 50T, což 
 
 Deska obsahuje mnoho užitečných nástrojů pro využití v projektech, jako například mikrofon, LED diody, reproduktor a další. Pro používání těchto komponentů deska obsahuje rozhraní 10/100 Ethernet, USB, VGA a jiné. Pro naše účely bude dostatečné rozhraní USB s použitím 7mi segmentových displejů, přepínačů a tlačítek.
 
-
+![Digilent_Nexys_A7-100T](https://user-images.githubusercontent.com/95495159/235364753-0c22832e-0b96-4617-91d1-f8c308c7bfe5.jpg)
 
 ## Software description
 
