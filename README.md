@@ -18,7 +18,7 @@ Mezi důležité oblasti tohoto projektu patří:
 - funkce pro přičítání počtu kol
 - správné zobrazení všech údajů na displeji
 - správná funkce resetu a enablu pomocí tlačítek
-- nastavování údajů pomocí switchů
+- nastavování údajů pomocí přepínačů
 
 ### Funkce pro odečet času kola a pauzy
 Po zmáčknutí tlačítka enable začne odečet kola. Po odečtení kola začne odečet pauzy.
@@ -27,17 +27,21 @@ Po zmáčknutí tlačítka enable začne odečet kola. Po odečtení kola začne
 Jakmile skončí odečtení pauzy, přičte se počet kol a odčítání kola opět začíná.
 
 ### Správné zobrazení všech údajů na displeji
-Pro správné zobrazení všech hodnot (počet kol, čas kola a čas pauzy) jsme vytvořili samostatné design sourcy a v každém sourcu bylo definováno zobrazení na sedmibitovém displeji, počet cifer na displeji a počet čísel, který každá cifra bude ukazovat. Takže například v kódu pro zobrazení pauzy jsme definovali, že se bude zobrazovat na dvou 7mi segmentových displejích a každý displej bude ukazovat hodnoty 0 až 9.
+Pro správné zobrazení všech hodnot (počet kol, čas kola a čas pauzy) jsme vytvořili samostatné design sourcy, a v každém sourcu bylo definováno zobrazení na sedmibitovém displeji, počet cifer na displeji a počet čísel, který každá cifra bude ukazovat. Takže například v kódu pro zobrazení pauzy jsme definovali, že se bude zobrazovat na dvou 7mi segmentových displejích a každý displej bude ukazovat hodnoty 0 až 9.
 
 ### Správná funkce resetu a enablu pomocí tlačítek
 Pro tyto funkce jsme si zvolili tlačítka nad 7mi segmentovými displeji. Prostřední tlačítko BTNC slouží k resetu časovače a levé tlačítko BTNL slouží ke spuštění odpočtu. Jakmile jsme si jistí, že jsme nastavili požadované hodnoty na displeji, tak zmáčkeme tlačítko BTNL a na displeji se zahájí odpočet. Naopak při zmáčknutí tlačítka BTNC se odpočet zastaví a přepne se na hodnoty, které jsme nastavili na začátku odpočtu. 
 
 ### Nastavování údajů pomocí switchů
-Pro nastavování údajů jsme si pro každý údaj, kromě času pauzy, určili 4-bitové číslo, které budeme nastavovat pomocí switchů. První 4 switche zprava slouží k nastavení délky kola. První switch zprava má hodnotu nejméně významného bitu a čtvrtý switch zprava má hodnotu nejvíce významného bitu. Podobným způsobem funguje nastavení počtu kol následujícími switchi v pořadí.
+Pro nastavování údajů jsme si pro každý údaj, kromě času pauzy, určili 4-bitové číslo, které budeme nastavovat pomocí přepínačů. První 4 přepínače zprava slouží k nastavení délky kola. První přepínač zprava má hodnotu nejméně významného bitu a čtvrtý přepínač zprava má hodnotu nejvíce významného bitu. Podobným způsobem funguje nastavení počtu kol následujícími přepínači v pořadí.
 
 ## Hardware description of demo application
 
-Insert descriptive text and schematic(s) of your implementation.
+Pro realizaci našeho časovače jsme použili desku Nexys A7 Artix-7 50T, což je dostupná, ale zároveň výkonná vývojářská deska. Jelikož byla deska navržena v rámci Xilinx Artix®-7 FPGA family, tak je tato deska výbornou platformou pro seznamení studentů s vývojem digitálních obvodů a jejich následnou aplikací. Nexys A7 Artix-7 50T je podporovaná softwarem Xilinx Vivado Design Suite, který byl použit pro vytvoření tohoto projektu. 
+
+Deska obsahuje mnoho užitečných nástrojů pro využití v projektech, jako například mikrofon, LED diody, reproduktor a další. Pro používání těchto komponentů deska obsahuje rozhraní 10/100 Ethernet, USB, VGA a jiné. Pro naše účely bude dostatečné rozhraní USB s použitím 7mi segmentových displejů, přepínačů a tlačítek.
+
+
 
 ## Software description
 
@@ -800,9 +804,9 @@ Na snímku obrazovky níže můžeme pozorovat, jak funguje funkce našeho časo
 
 ## Instructions
 
-Časovač se zobrazuje v plné šíři osmi 7mi-segmentových číslic, v prvních 2 číslicích vlevo lze pozorovat počet kol, uprostřed se zobrazuje odpočítávání pauzy a úplně vpravo se zobrazuje odpočet kola. Časovač má předem nastavené 3 kola s délkou 20 sekund a pevně nastavenou pauzu 10 sekund. Počet kol a délku kola lze nastavit pomocí switchů zprava doleva. První 4 switche slouží k nastavení délky kola a následující 4 switche slouží k nastavení počtu kol. Přepnutím switche do vrchní polohy přidáváme čas či počet kol. V každé sekci (pro počet kol a čas kola) vpravo se nachází nejmenší možný přídavek kola / času a vlevo se nachází nejvyšší možný přídavek kol / času. Pro zvýšení požadovaného parametru musíme switch přepnout do vrchní polohy, naopak pro snížení musí switch zůstat ve spodní poloze. Jakmile jsme nastavili požadovaný počet kol a čas kola, odpočet lze spustit tlačítkem BTNL (tlačítko vlevo od středu). Pokud jsme nechtěně nastavili špatný čas kola či počet kol, odpočet lze resetovat prostředním tlačítkem BTNC. Časovač se může hodit pro cvičení v sériích, nebo může posloužit jako "minutka" při vaření v kuchyni.
+Časovač se zobrazuje v plné šíři osmi 7mi-segmentových číslic, v prvních 2 číslicích vlevo lze pozorovat počet kol, uprostřed se zobrazuje odpočítávání pauzy a úplně vpravo se zobrazuje odpočet kola. Časovač má předem nastavené 3 kola s délkou 20 sekund a pevně nastavenou pauzu 10 sekund. Počet kol a délku kola lze nastavit pomocí přepínačů zprava doleva. První 4 přepínače slouží k nastavení délky kola a následující 4 přepínače slouží k nastavení počtu kol. Přepnutím přepínače do vrchní polohy přidáváme čas či počet kol. V každé sekci (pro počet kol a čas kola) vpravo se nachází nejmenší možný přídavek kola / času a vlevo se nachází nejvyšší možný přídavek kol / času. Pro zvýšení požadovaného parametru musíme přepínač přepnout do vrchní polohy, naopak pro snížení musí přepínač zůstat ve spodní poloze. Jakmile jsme nastavili požadovaný počet kol a čas kola, odpočet lze spustit tlačítkem BTNL (tlačítko vlevo od středu). Pokud jsme nechtěně nastavili špatný čas kola či počet kol, odpočet lze resetovat prostředním tlačítkem BTNC. Časovač se může hodit pro cvičení v sériích, nebo může posloužit jako "minutka" při vaření v kuchyni.
 
 ## References
 
-1. Put here the literature references you used.
+1. https://digilent.com/shop/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum/
 2. ...
