@@ -48,7 +48,7 @@ begin
         sig_cnt1 <= (others => '0'); -- Clear all bits of first counter
         sig_cnt2 <= (others => '0'); -- Clear all bits of second counter
         sig_cycle_count <= (others => '0');          -- Reset cycle count
-      elsif (en = '1' and sig_cycle_count < g_NUM_CYCLES)then --and sig_en = '1') then     -- Test if counter is enabled and cycle count is less than g_NUM_CYCLES
+      elsif (en = '1' and sig_cycle_count < g_NUM_CYCLES and sig_en = '1') then     -- Test if counter is enabled and cycle count is less than g_NUM_CYCLES
         if sig_cnt1 = 0 then                                       -- Test if first counter has reached zero
           if sig_cnt2 = 0 then                                     -- Test if second counter has reached zero
             sig_cnt1 <= to_unsigned(g_CNT1_INIT, 10);              -- Reset first counter to initial value of g_CNT1_INIT
