@@ -1,0 +1,13 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+C:/Users/Filip/Desktop/digitalelprojekt/project_4/project_4.srcs/sources_1/new/7seg_k.vhd,1682507216,vhdl,,,,hex_7seg_k,,,,,,,,
+C:/Users/Filip/Desktop/digitalelprojekt/project_4/project_4.srcs/sources_1/new/7seg_p.vhd,1682507216,vhdl,,,,hex_7seg_p,,,,,,,,
+C:/Users/Filip/Desktop/digitalelprojekt/project_4/project_4.srcs/sources_1/new/clock_enable.vhd,1682625050,vhdl,C:/Users/Filip/Desktop/digitalelprojekt/project_4/project_4.srcs/sources_1/new/timer.vhd,,,clock_enable,,,,,,,,
+C:/Users/Filip/Desktop/digitalelprojekt/project_4/project_4.srcs/sources_1/new/hex_7seg.vhd,1682976388,vhdl,,,,hex_7seg,,,,,,,,
+C:/Users/Filip/Desktop/digitalelprojekt/project_4/project_4.srcs/sources_1/new/tb_timer.vhd,1682973071,vhdl,,,,tb_timer,,,,,,,,
+C:/Users/Filip/Desktop/digitalelprojekt/project_4/project_4.srcs/sources_1/new/tb_timer_7seg.vhd,1682976676,vhdl,,,,tb_timer_7seg,,,,,,,,
+C:/Users/Filip/Desktop/digitalelprojekt/project_4/project_4.srcs/sources_1/new/timer.vhd,1682973318,vhdl,C:/Users/Filip/Desktop/digitalelprojekt/project_4/project_4.srcs/sources_1/new/tb_timer_7seg.vhd,,,timer,,,,,,,,
+C:/Users/Filip/Desktop/digitalelprojekt/project_4/project_4.srcs/sources_1/new/timer_7seg.vhd,1682975760,vhdl,C:/Users/Filip/Desktop/digitalelprojekt/project_4/project_4.srcs/sources_1/new/top.vhd,,,timer_7seg,,,,,,,,
+C:/Users/Filip/Desktop/digitalelprojekt/project_4/project_4.srcs/sources_1/new/top.vhd,1682979457,vhdl,,,,top,,,,,,,,

@@ -1,0 +1,148 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon May  1 22:33:32 2023
+# Process ID: 14920
+# Current directory: C:/Users/Filip/Desktop/digitalelprojekt/project_4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5732 C:\Users\Filip\Desktop\digitalelprojekt\project_4\project_4.xpr
+# Log file: C:/Users/Filip/Desktop/digitalelprojekt/project_4/vivado.log
+# Journal file: C:/Users/Filip/Desktop/digitalelprojekt/project_4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Filip/Desktop/digitalelprojekt/project_4/project_4.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_timer.tcl
+current_wave_config {Untitled 1}
+add_wave {{/tb_timer/uut_cnt/sig_cycle_count}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_timer/uut_cnt/sig_cnt1}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_timer/uut_cnt/sig_cnt2}} 
+relaunch_sim
+relaunch_sim
+set_property top tb_timer_7seg [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
+launch_simulation
+source tb_timer_7seg.tcl
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/cnt1_sig}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/cnt2_sig}} 
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/uut_cnt/cnt1}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/uut_cnt/cnt2}} 
+relaunch_sim
+add_bp {C:/Users/Filip/Desktop/digitalelprojekt/project_4/project_4.srcs/sources_1/new/timer_7seg.vhd} 87
+remove_bps -file {C:/Users/Filip/Desktop/digitalelprojekt/project_4/project_4.srcs/sources_1/new/timer_7seg.vhd} -line 87
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_timer/cnt1}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_timer/cnt2}} 
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/sig_cnt1}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/sig_cnt2}} 
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/sig_cnt1}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/sig_cnt2}} 
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg/hex}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg/seg1}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg/seg2}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg_k/hex}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg_p/hex}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg_p/seg1_p}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg_p/seg2_p}} 
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/seg3}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+set_property -name {xsim.simulate.runtime} -value {4000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_timer_7seg.tcl
+current_wave_config {Untitled 3}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/seg1}} 
+current_wave_config {Untitled 3}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/seg2}} 
+current_wave_config {Untitled 3}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/seg3}} 
+current_wave_config {Untitled 3}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg/hex}} 
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 3}
+add_wave {{/tb_timer_7seg/clk_sig}} 
+relaunch_sim
+current_wave_config {Untitled 3}
+add_wave {{/tb_timer_7seg/rst_sig}} 
+current_wave_config {Untitled 3}
+add_wave {{/tb_timer_7seg/en_sig}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+set_property -name {xsim.simulate.runtime} -value {1000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_timer_7seg.tcl
+current_wave_config {Untitled 4}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg/hex}} 
+current_wave_config {Untitled 4}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg/seg1}} 
+current_wave_config {Untitled 4}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg/seg2}} 
+current_wave_config {Untitled 4}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg_k/hex}} 
+current_wave_config {Untitled 4}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg_k/seg}} 
+current_wave_config {Untitled 4}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg_p/hex}} 
+current_wave_config {Untitled 4}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg_p/seg1_p}} 
+current_wave_config {Untitled 4}
+add_wave {{/tb_timer_7seg/inst_timer_7seg/inst_hex_7seg_p/seg2_p}} 
+relaunch_sim
+set_property top top [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
+launch_simulation
+launch_simulation
+source top.tcl
+close_sim
+launch_simulation
+source top.tcl
+close_sim
+set_property top tb_timer_7seg [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_timer_7seg.tcl
+close_sim
