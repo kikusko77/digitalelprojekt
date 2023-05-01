@@ -45,7 +45,7 @@ architecture behavioral of top is
 
     -- Signals
     signal count: integer range 0 to 1000000 := 0;
-    signal digit_sel: integer range 1 to 3 := 1;
+    signal digit_sel: integer range 1 to 5 := 1;
 
 begin
 
@@ -105,10 +105,8 @@ begin
                         CG <=   sig_seg3(0);
                         digit_sel <= digit_sel + 1;
 
-
-
-                     when 5 =>
-                        AN <= "11101111"; -- Select third seven-segment display
+                     when 4 =>
+                        AN <= "11101111"; 
                         CA <=   sig_seg1_p(6);
                         CB <=   sig_seg1_p(5);
                         CC <=   sig_seg1_p(4);
@@ -119,8 +117,8 @@ begin
                         digit_sel <= digit_sel + 1;
                         
 
-                         when 6 =>
-                        AN <= "11011111"; -- Select third seven-segment display
+                     when 5 =>
+                        AN <= "11011111"; 
                         CA <=   sig_seg2_p(6);
                         CB <=   sig_seg2_p(5);
                         CC <=   sig_seg2_p(4);
@@ -132,7 +130,7 @@ begin
     
                         
                        when others =>
-                        AN <= "01111111"; -- Select third seven-segment display
+                        AN <= "01111111"; 
                         CA <=   sig_seg(6);
                         CB <=   sig_seg(5);
                         CC <=   sig_seg(4);

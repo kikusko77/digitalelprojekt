@@ -35,7 +35,7 @@ begin
       -- FOR IMPLEMENTATION, CALCULATE VALUE: 250 ms / (1/100 MHz)
       -- 1   @ 10 ns
       -- ??? @ 250 ms
-      g_MAX => 500000000
+      g_MAX => 100000000
     )
     port map (
       clk => clk,
