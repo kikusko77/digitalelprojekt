@@ -18,10 +18,11 @@ Mezi důležité oblasti tohoto projektu patří:
 - funkce pro přičítání počtu kol
 - správné zobrazení všech údajů na displeji
 - správná funkce resetu a enablu pomocí tlačítek
+- správná funkce enable
 - nastavování údajů pomocí přepínačů
 
 ### Funkce pro odečet času kola a pauzy
-Po zmáčknutí tlačítka enable začne odečet kola. Po odečtení kola začne odečet pauzy.
+Po přepnutí patnáctého přepínače začne odečet kola. Po odečtení kola začne odečet pauzy.
 
 ### Funkce pro přičítání počtu kol
 Jakmile skončí odečtení pauzy, přičte se počet kol a odčítání kola opět začíná.
@@ -29,11 +30,14 @@ Jakmile skončí odečtení pauzy, přičte se počet kol a odčítání kola op
 ### Správné zobrazení všech údajů na displeji
 Pro správné zobrazení všech hodnot (počet kol, čas kola a čas pauzy) jsme vytvořili samostatné design sourcy, a v každém sourcu bylo definováno zobrazení na sedmibitovém displeji, počet cifer na displeji a počet čísel, který každá cifra bude ukazovat. Takže například v kódu pro zobrazení pauzy jsme definovali, že se bude zobrazovat na dvou 7mi segmentových displejích a každý displej bude ukazovat hodnoty 0 až 9.
 
-### Správná funkce resetu a enablu pomocí tlačítek
-Pro tyto funkce jsme si zvolili tlačítka nad 7mi segmentovými displeji. Prostřední tlačítko BTNC slouží k resetu časovače a levé tlačítko BTNL slouží ke spuštění odpočtu. Jakmile jsme si jistí, že jsme nastavili požadované hodnoty na displeji, tak zmáčkeme tlačítko BTNL a na displeji se zahájí odpočet. Naopak při zmáčknutí tlačítka BTNC se odpočet zastaví a přepne se na hodnoty, které jsme nastavili na začátku odpočtu. 
+### Správná funkce resetu
+Pro tuto funkci jsme si zvolili tlačítko BTNC nad 7mi segmentovými displeji. Při zmáčknutí tlačítka BTNC se odpočet zastaví a displej se vynuluje.
 
-### Nastavování údajů pomocí switchů
-Pro nastavování údajů jsme si pro každý údaj, kromě času pauzy, určili 4-bitové číslo, které budeme nastavovat pomocí přepínačů. První 4 přepínače zprava slouží k nastavení délky kola. První přepínač zprava má hodnotu nejméně významného bitu a čtvrtý přepínač zprava má hodnotu nejvíce významného bitu. Podobným způsobem funguje nastavení počtu kol následujícími přepínači v pořadí.
+### Správná funkce enable
+Pro tuto funkci jsme si zvolili patnáctý přepínač. Při jeho sepnutí začne odpočet časovače podle nastavení. Pokud jsme ponechali výchozí nastavení, tak se začnou odčítat 3 kola po 30 sekundách s 20 sekundovou pauzou.
+
+### Nastavování údajů pomocí přepínačů
+Pro nastavování údajů jsme si pro každý údaj určili n-bitové číslo, které budeme nastavovat pomocí přepínačů. První 2 přepínače zprava slouží k nastavení počtu kol. První přepínač zprava má hodnotu nejméně významného bitu a druhý přepínač zprava má hodnotu nejvíce významného bitu. Podobným způsobem funguje nastavení času kola následujícími třemi přepínači v pořadí a úplně stejně to má i délka pauzy, která se nastavuje dalšími dvěmi přepínači.
 
 ## Hardware description of demo application
 
@@ -798,15 +802,15 @@ set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { SW[0] 
 
 ### Component(s) simulation
 
-Na snímku obrazovky níže můžeme pozorovat, jak funguje funkce našeho časovače. Při aktivaci tlačítka enable začne postupný odpočet kola. Jakmile kolo skončí, začne se odčítávat pauza. Po skončení pauzy se přičte počet kol a celý proces se opakuje.
+Na snímku obrazovky níže můžeme pozorovat, jak funguje náš časovač. Při aktivaci tlačítka enable začne postupný odpočet kola. Jakmile kolo skončí, začne se odčítávat pauza. Po skončení pauzy se přičte počet kol a celý proces se opakuje.
 
 ![Capture](https://user-images.githubusercontent.com/95495159/235148465-c7c22338-cda8-4edf-b740-eeb164a91847.png)
 
 ## Instructions
 
-Časovač se zobrazuje v plné šíři osmi 7mi-segmentových číslic, v prvních 2 číslicích vlevo lze pozorovat počet kol, uprostřed se zobrazuje odpočítávání pauzy a úplně vpravo se zobrazuje odpočet kola. Časovač má předem nastavené 3 kola s délkou 20 sekund a pevně nastavenou pauzu 10 sekund. Počet kol a délku kola lze nastavit pomocí přepínačů zprava doleva.
-První 4 přepínače slouží k nastavení délky kola a následující 4 přepínače slouží k nastavení počtu kol. Přepnutím přepínače do vrchní polohy přidáváme čas či počet kol. V každé sekci (pro počet kol a čas kola) vpravo se nachází nejmenší možný přídavek kola / času a vlevo se nachází nejvyšší možný přídavek kol / času. Pro zvýšení požadovaného parametru musíme přepínač přepnout do vrchní polohy, naopak pro snížení musí přepínač zůstat ve spodní poloze.
-Jakmile jsme nastavili požadovaný počet kol a čas kola, odpočet lze spustit tlačítkem BTNL (tlačítko vlevo od středu). Pokud jsme nechtěně nastavili špatný čas kola či počet kol, odpočet lze resetovat prostředním tlačítkem BTNC. Časovač se může hodit pro cvičení v sériích, nebo může posloužit jako "minutka" při vaření v kuchyni.
+Časovač se zobrazuje v plné šíři osmi 7mi-segmentových číslic, v prvních 3 číslicích vlevo lze pozorovat délku kola, uprostřed se zobrazuje odpočítávání pauzy a úplně vpravo se zobrazuje pořadí kola. Časovač má předem nastavené 3 kola s délkou 30 sekund a pevně nastavenou pauzu 20 sekund. Počet kol, délku kola a délku pauzy lze nastavit pomocí přepínačů zprava doleva.
+První 2 přepínače slouží k nastavení počtu kol, následující 3 přepínače slouží k nastavení délky kola a další 2 přepínače slouží k nastavení délky pauzy. Přepnutím přepínače do vrchní polohy přidáváme čas či počet kol. V každé sekci (počet kol, délka kola, délka pauzy) se vpravo nachází nejmenší možný přídavek kola / času a vlevo se nachází nejvyšší možný přídavek kol / času. Pro zvýšení požadovaného parametru musíme přepínač přepnout do vrchní polohy, naopak pro snížení musí přepínač zůstat ve spodní poloze.
+Jakmile jsme nastavili požadované údaje, odpočet lze spustit 15. přepínačem. Pokud jsme nechtěně nastavili špatný čas kola či počet kol, odpočet lze resetovat prostředním tlačítkem BTNC. Časovač se může hodit pro cvičení v sériích, nebo může posloužit jako "minutka" při vaření v kuchyni.
 
 ## References
 
