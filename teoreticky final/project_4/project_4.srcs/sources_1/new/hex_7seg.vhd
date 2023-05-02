@@ -35,7 +35,7 @@ begin
                 when 1 => seg3 <= "1001111";
                 when 2 => seg3 <= "0010010";
                 when 3 => seg3 <= "0000110";
-                when others => null;
+                when others => seg3 <= "1111111";
             end case;
 
             case tens is

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Apr 27 13:01:33 2023
+| Date         : Tue May  2 16:25:32 2023
 | Host         : PC-629 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
 | Design       : top
@@ -39,12 +39,12 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (114)
+1. checking no_clock (91)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (192)
-5. checking no_input_delay (2)
-6. checking no_output_delay (11)
+4. checking unconstrained_internal_endpoints (195)
+5. checking no_input_delay (9)
+6. checking no_output_delay (13)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
 9. checking loops (0)
@@ -52,27 +52,9 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (114)
---------------------------
- There are 87 register/latch pins with no clock driven by root clock pin: CLK100MHZ (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: timer_7seg_inst/inst_timer/sig_cnt1_reg[0]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: timer_7seg_inst/inst_timer/sig_cnt1_reg[1]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: timer_7seg_inst/inst_timer/sig_cnt1_reg[2]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: timer_7seg_inst/inst_timer/sig_cnt1_reg[3]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: timer_7seg_inst/inst_timer/sig_cnt1_reg[4]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: timer_7seg_inst/inst_timer/sig_cnt1_reg[5]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: timer_7seg_inst/inst_timer/sig_cnt1_reg[6]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: timer_7seg_inst/inst_timer/sig_cnt1_reg[7]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: timer_7seg_inst/inst_timer/sig_cnt1_reg[8]/Q (HIGH)
+1. checking no_clock (91)
+-------------------------
+ There are 91 register/latch pins with no clock driven by root clock pin: CLK100MHZ (HIGH)
 
 
 2. checking constant_clock (0)
@@ -85,23 +67,23 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (192)
+4. checking unconstrained_internal_endpoints (195)
 --------------------------------------------------
- There are 192 pins that are not constrained for maximum delay. (HIGH)
+ There are 195 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
-5. checking no_input_delay (2)
+5. checking no_input_delay (9)
 ------------------------------
- There are 2 input ports with no input delay specified. (HIGH)
+ There are 9 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
-6. checking no_output_delay (11)
+6. checking no_output_delay (13)
 --------------------------------
- There are 11 ports with no output delay specified. (HIGH)
+ There are 13 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

@@ -53,7 +53,8 @@ architecture behavioral of top is
     signal SW_NUM_CYCLES : natural;
     signal SW_CNT1_INIT : natural;
     signal SW_CNT2_INIT : natural;
-    
+
+   
     
 begin
 
@@ -79,11 +80,11 @@ begin
     p_set_values : process(SW)
     begin
         if SW(1) = '1' then
-            SW_NUM_CYCLES <= 3;
+            SW_NUM_CYCLES <= 7;
         elsif SW(0) = '1' then
-            SW_NUM_CYCLES <= 2;    
+            SW_NUM_CYCLES <= 5;    
         else
-            SW_NUM_CYCLES <= 1; -- default value
+            SW_NUM_CYCLES <= 3; -- default value
         end if;
         
         if SW(4) = '1' then
@@ -97,14 +98,16 @@ begin
         end if;
         
         if SW(6) = '1' then
-            SW_CNT2_INIT <= 20;
+            SW_CNT2_INIT <= 90;
         elsif SW(5) = '1' then
-            SW_CNT2_INIT <= 15;   
+            SW_CNT2_INIT <= 60;   
         else
-            SW_CNT2_INIT <= 10; -- default value
+            SW_CNT2_INIT <= 20; -- default value
         end if;
         
     end process p_set_values;
+    
+    
     
     -- Multiplexing process
     mux_proc: process (CLK100MHZ)

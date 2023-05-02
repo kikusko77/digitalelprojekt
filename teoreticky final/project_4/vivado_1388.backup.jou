@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue May  2 00:52:09 2023
+# Process ID: 1388
+# Current directory: C:/Users/Filip/Desktop/VUT/2. roèník/2. semester/DE1/projekt/digitalelprojekt/teoreticky final/project_4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5040 C:\Users\Filip\Desktop\VUT\2. roèník\2. semester\DE1\projekt\digitalelprojekt\teoreticky final\project_4\project_4.xpr
+# Log file: C:/Users/Filip/Desktop/VUT/2. roèník/2. semester/DE1/projekt/digitalelprojekt/teoreticky final/project_4/vivado.log
+# Journal file: C:/Users/Filip/Desktop/VUT/2. roèník/2. semester/DE1/projekt/digitalelprojekt/teoreticky final/project_4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Filip/Desktop/VUT/2. roèník/2. semester/DE1/projekt/digitalelprojekt/teoreticky final/project_4/project_4.xpr}
+update_compile_order -fileset sources_1

@@ -12,8 +12,8 @@ entity hex_7seg_p is
 end entity hex_7seg_p;
 
 architecture behavioral of hex_7seg_p is
-    signal hex_int : integer range 0 to 20;
-    signal tens : integer range 0 to 2;
+    signal hex_int : integer range 0 to 99;
+    signal tens : integer range 0 to 9;
     signal ones : integer range 0 to 9;
 begin
     hex_int <= to_integer(unsigned(hex));
@@ -33,6 +33,13 @@ begin
                 when 0 => seg2_p <= "0000001";
                 when 1 => seg2_p <= "1001111";
                 when 2 => seg2_p <= "0010010";
+                when 3 => seg2_p <= "0000110";
+                when 4 => seg2_p <= "1001100";
+                when 5 => seg2_p <= "0100100";
+                when 6 => seg2_p <= "0100000";
+                when 7 => seg2_p <= "0001111";
+                when 8 => seg2_p <= "0000000";
+                when 9 => seg2_p <= "0000100";
                 when others => null;
             end case;
 

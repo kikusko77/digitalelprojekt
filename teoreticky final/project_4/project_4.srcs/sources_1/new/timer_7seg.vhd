@@ -27,7 +27,7 @@ architecture behavioral of timer_7seg is
             en : in std_logic;
             cnt1 : out std_logic_vector(9  downto 0);
             cnt2 : out std_logic_vector(9  downto 0);
-            cycle_count: out std_logic_vector(1 downto 0);
+            cycle_count: out std_logic_vector(2 downto 0);
             g_NUM_CYCLES: in natural;
             g_CNT1_INIT:  in natural;
             g_CNT2_INIT:  in natural
@@ -48,7 +48,7 @@ architecture behavioral of timer_7seg is
     component hex_7seg_k is
             port (
                 blank : in std_logic;
-                hex : in std_logic_vector(1 downto 0);
+                hex : in std_logic_vector(2 downto 0);
                 seg : out std_logic_vector(6 downto 0)
             );
         end component hex_7seg_k;
@@ -65,8 +65,8 @@ architecture behavioral of timer_7seg is
 
     signal cnt1_sig: std_logic_vector(9 downto 0);
     signal hex_sig: std_logic_vector(9 downto 0);
-    signal cycle1_count: std_logic_vector(1 downto 0);
-    signal hex_sig_k: std_logic_vector(1 downto 0);
+    signal cycle1_count: std_logic_vector(2 downto 0);
+    signal hex_sig_k: std_logic_vector(2 downto 0);
     signal hex_sig_p: std_logic_vector(9 downto 0);
     signal cnt2_sig: std_logic_vector(9 downto 0);
 

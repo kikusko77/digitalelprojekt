@@ -8,7 +8,7 @@ library ieee;
 entity hex_7seg_k is
   port (
     blank : in    std_logic;                    --! Display is clear if blank = 1
-    hex   : in    std_logic_vector(1 downto 0); --! Binary representation of one hexadecimal symbol
+    hex   : in    std_logic_vector(2 downto 0); --! Binary representation of one hexadecimal symbol
     seg   : out   std_logic_vector(6 downto 0)  --! Seven active-low segments in the order: a, b, ..., g
   );
 end entity hex_7seg_k;
@@ -31,20 +31,32 @@ begin
 
       case hex is
 
-        when "00" =>
+        when "000" =>
           seg <= "0000001"; -- 0
 
-        when "01" =>
+        when "001" =>
           seg <= "1001111"; -- 1
 
         -- WRITE YOUR CODE HERE
         -- 2, 3, 4, 5, 6, 7
 
-        when "10" =>
+        when "010" =>
           seg <= "0010010"; -- 2
 
-        when "11" =>
+        when "011" =>
           seg <= "0000110"; -- 3
+
+        when "100" =>
+          seg <= "1001100"; -- 4
+
+        when "101" =>
+          seg <= "0100100"; -- 5
+
+        when "110" =>
+          seg <= "0100000"; -- 6
+
+        when "111" =>
+          seg <= "0001111"; -- 7
 
         when others =>
           seg <= "1111111"; -- F
