@@ -10,6 +10,8 @@
 
 + všichni se podíleli na tvoření kódu, implementace na desku a na dalších úkolech během hodin cvičení na počítači
 
+
+
 ## Theoretical description and explanation
 
 Mezi důležité oblasti tohoto projektu patří: 
@@ -47,11 +49,13 @@ Deska obsahuje mnoho užitečných nástrojů pro využití v projektech, jako n
 
 ![Digilent_Nexys_A7-100T](https://user-images.githubusercontent.com/95495159/235364753-0c22832e-0b96-4617-91d1-f8c308c7bfe5.jpg)
 
+
+
 ## Software description
 
 Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in `src` and `sim` folders.
 
-#7seg_k - source, který slouží k počítání kol na displeji
+### 7seg_k - source, který slouží k počítání kol na displeji
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/7seg_k.vhd
 
@@ -1011,17 +1015,31 @@ set_property -dict { PACKAGE_PIN U13   IOSTANDARD LVCMOS33 } [get_ports { AN[7] 
 ```
  
 
+
 ### Component(s) simulation
 
 Na snímku obrazovky níže můžeme pozorovat, jak funguje náš časovač. Při aktivaci tlačítka enable začne postupný odpočet kola. Jakmile kolo skončí, začne se odčítávat pauza. Po skončení pauzy se přičte počet kol a celý proces se opakuje.
 
 ![Capture](https://user-images.githubusercontent.com/95495159/235148465-c7c22338-cda8-4edf-b740-eeb164a91847.png)
 
+
+### Obvod projektu
+
+<img width="514" alt="Snímek obrazovky 2023-05-02 192727" src="https://user-images.githubusercontent.com/95495159/235740612-9bda64a2-402b-48ab-81d0-30cc92efd261.png">
+
+<img width="857" alt="Snímek obrazovky 2023-05-02 192749" src="https://user-images.githubusercontent.com/95495159/235740636-1d943ed9-49d2-49bf-81eb-6a2af3c13f93.png">
+
+<img width="159" alt="Snímek obrazovky 2023-05-02 192811" src="https://user-images.githubusercontent.com/95495159/235740645-ab834112-de43-4e33-817e-258aea02b5c2.png">
+
+
+
 ## Instructions
 
 Časovač se zobrazuje v plné šíři osmi 7mi-segmentových číslic, v prvních 3 číslicích vlevo lze pozorovat délku kola, uprostřed se zobrazuje odpočítávání pauzy a úplně vpravo se zobrazuje pořadí kola. Časovač má předem nastavené 3 kola s délkou 30 sekund a pevně nastavenou pauzu 20 sekund. Počet kol, délku kola a délku pauzy lze nastavit pomocí přepínačů zprava doleva.
 První 2 přepínače slouží k nastavení počtu kol, následující 3 přepínače slouží k nastavení délky kola a další 2 přepínače slouží k nastavení délky pauzy. Přepnutím přepínače do vrchní polohy přidáváme čas či počet kol. V každé sekci (počet kol, délka kola, délka pauzy) se vpravo nachází nejmenší možný přídavek kola / času a vlevo se nachází nejvyšší možný přídavek kol / času. Pro zvýšení požadovaného parametru musíme přepínač přepnout do vrchní polohy, naopak pro snížení musí přepínač zůstat ve spodní poloze.
 Jakmile jsme nastavili požadované údaje, odpočet lze spustit 15. přepínačem. Pokud jsme nechtěně nastavili špatný čas kola či počet kol, odpočet lze resetovat prostředním tlačítkem BTNC. Časovač se může hodit pro cvičení v sériích, nebo může posloužit jako "minutka" při vaření v kuchyni.
+
+
 
 ## References
 
