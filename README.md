@@ -1035,7 +1035,7 @@ Na snímku obrazovky níže můžeme pozorovat, jak funguje náš časovač. Př
 
 ## Instructions
 
-Časovač se zobrazuje v plné šíři osmi 7mi-segmentových číslic, v prvních 3 číslicích vlevo lze pozorovat délku kola, uprostřed se zobrazuje odpočítávání pauzy a úplně vpravo se zobrazuje pořadí kola. Časovač má předem nastavené 3 kola s délkou 30 sekund a pevně nastavenou pauzu 20 sekund. Počet kol, délku kola a délku pauzy lze nastavit pomocí přepínačů zprava doleva.
+Časovač se zobrazuje v plné šíři osmi 7mi-segmentových číslic, v prvních 3 číslicích vpravo lze pozorovat délku kola, uprostřed se zobrazuje odpočítávání pauzy a úplně vlevo se zobrazuje pořadí kola. Časovač má předem nastavené 3 kola s délkou 30 sekund a pevně nastavenou pauzu 20 sekund. Počet kol, délku kola a délku pauzy lze nastavit pomocí přepínačů zprava doleva.
 První 2 přepínače slouží k nastavení počtu kol, následující 3 přepínače slouží k nastavení délky kola a další 2 přepínače slouží k nastavení délky pauzy. Přepnutím přepínače do vrchní polohy přidáváme čas či počet kol. V každé sekci (počet kol, délka kola, délka pauzy) se vpravo nachází nejmenší možný přídavek kola / času a vlevo se nachází nejvyšší možný přídavek kol / času. Pro zvýšení požadovaného parametru musíme přepínač přepnout do vrchní polohy, naopak pro snížení musí přepínač zůstat ve spodní poloze.
 Jakmile jsme nastavili požadované údaje, odpočet lze spustit 15. přepínačem. Pokud jsme nechtěně nastavili špatný čas kola či počet kol, odpočet lze resetovat prostředním tlačítkem BTNC. Časovač se může hodit pro cvičení v sériích, nebo může posloužit jako "minutka" při vaření v kuchyni.
 
