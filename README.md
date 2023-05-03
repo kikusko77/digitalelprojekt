@@ -8,10 +8,6 @@
 * Christian Kuric
 * Jakub Raimr
 
-
-
-
-
 ## Theoretical description and explanation
 
 Mezi důležité oblasti tohoto projektu patří: 
@@ -30,19 +26,16 @@ Po přepnutí patnáctého přepínače začne odečet kola. Po odečtení kola 
 Jakmile skončí odečtení pauzy, přičte se počet kol a odčítání kola opět začíná.
 
 ### Správné zobrazení všech údajů na displeji
-Pro správné zobrazení hodnot času kola a pauzy posíláme daná čísla do hex7_seg a 7seg_p, kde jsou čísla konvertována pomocí dalších funkcí na jednotlivé cifry. Tyto cifry jsou následně v jejich 7mi segmentových hodnotách posílány na 7mi segmentový displej.
-Takže například v kódu pro zobrazení pauzy jsme definovali, že se bude zobrazovat na dvou 7mi segmentových displejích a každý displej bude ukazovat hodnoty 0 až 9.
+Pro správné zobrazení hodnot času kola a pauzy posíláme daná čísla do `hex7_seg` a `7seg_p`, kde jsou čísla konvertována pomocí dalších funkcí na jednotlivé cifry. Tyto cifry jsou následně v jejich 7mi segmentových hodnotách posílány na 7mi segmentový displej.
 
 ### Správná funkce resetu
-Pro tuto funkci jsme si zvolili tlačítko BTNC nad 7mi segmentovými displeji. Při zmáčknutí tlačítka BTNC se odpočet zastaví a displej se vynuluje.
+Pro tuto funkci jsme si zvolili tlačítko BTNC nad 7mi segmentovými displeji. Při zmáčknutí tlačítka BTNC se časovač vrátí na začátek a začne znovu odpočítávat.
 
 ### Správná funkce enable
 Pro tuto funkci jsme si zvolili patnáctý přepínač. Při jeho sepnutí začne odpočet časovače podle zvoleného nastavení. Pokud jsme ponechali výchozí nastavení, tak se začnou odčítat 3 kola po 30 sekundách s 20 sekundovou pauzou.
 
 ### Nastavování údajů pomocí přepínačů
-Pro každou veličinu jsme si určili n-bitové číslo, konkrétně pro čas kola 10ti bitové číslo, pro čas pauzy 10ti bitové číslo a pro zobrazení kol 3 bitové číslo. Nejvyšší zobrazitelný čas kola je 300 sekund, nejvyšší možný čas pauzy je 99 sekund a nejvyšší počet kol je 7. 
-U každé veličiny budeme nastavovat číslo natural za pomocí přepínačů. První 2 přepínače zprava (SW(0), SW(1)) slouží k nastavení počtu kol. První přepínač zprava má nejměnší přírůst čísla natural a druhý přepínač zprava má nejvyšší přírůst čísla natural. Podobným způsobem funguje nastavení času kola následujícími třemi přepínači v pořadí (SW(2), SW(3), SW(4)) a úplně stejně to má i délka pauzy, která se nastavuje dalšími dvěmi přepínači (SW(5), SW(6)).
-Pomocí design souborů hex_7seg, 7seg_p a 7seg_k zvolenou hodnotu natural dekódujeme na jednotlivé cifry, které jsou následně zobrazeny na displeji.
+Pomocí přepínačů 0 až 6 jsme schopni nastavit konkrétní parametry, podle kterých bude časovač pracovat.
 
 ## Hardware description of demo application
 
@@ -58,17 +51,13 @@ Deska obsahuje mnoho užitečných nástrojů pro využití v projektech, jako n
 
 Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in `src` and `sim` folders.
 
-7seg_k - nevím - source, který slouží k počítání kol na displeji
 
-https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/7seg_k.vhd
+[7seg_k](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/7seg_k.vhd) - převod 3 bitového čísla na konkrétní hodnotu na 7 segmentovém dipleji (zobrazování počtu kol)
 
 ```vhdl
 
-
 library ieee;
   use ieee.std_logic_1164.all;
-
-
 
 entity 7seg_k is
   port (
@@ -77,10 +66,6 @@ entity 7seg_k is
     seg   : out   std_logic_vector(6 downto 0)  --! Seven active-low segments in the order: a, b, ..., g
   );
 end entity hex_7seg_k;
-
-----------------------------------------------------------
--- Architecture body for seven-segment display decoder
-----------------------------------------------------------
 
 architecture behavioral of hex_7seg_k is
 
@@ -101,9 +86,6 @@ begin
 
         when "001" =>
           seg <= "1001111"; -- 1
-
-        -- WRITE YOUR CODE HERE
-        -- 2, 3, 4, 5, 6, 7
 
         when "010" =>
           seg <= "0010010"; -- 2
@@ -136,10 +118,7 @@ end architecture behavioral;
 ```
 
 
-
-7seg_p - nevím - source, který slouží k počítání času pauzy
-
-https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/7seg_p.vhd
+[7seg_p](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/7seg_p.vhd) - dekódování binární reprezentace víceciferného decimálního čísla na konkrétní hodnotu pro konkrétní 7 segmentový displej pomocí zbytku po dělení (zobrazování pauzy)
 
 ```vhdl
 library ieee;
@@ -206,10 +185,7 @@ end architecture behavioral;
 ```
 
 
-
-clock_enable - nevím - source se spouštěním odpočtu
-
-https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/clock_enable.vhd
+[clock_enable](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/clock_enable.vhd) - spouštění odpočtu časovače, synchronní proces, zahrnutý reset
 
 ```vhdl
 ----------------------------------------------------------
@@ -288,10 +264,7 @@ end architecture behavioral;
 ```
 
 
-
-hex_7seg - nevím - source se zobrazením času kola
-
-https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/hex_7seg.vhd
+[hex_7seg](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/hex_7seg.vhd) - nevím - source se zobrazením času kola
 
 ```vhdl
 library ieee;
@@ -367,10 +340,7 @@ end architecture behavioral;
 ```
 
 
-
-timer - nevím - source, který obsahuje funkce odpočtu časovače
-
-https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/timer.vhd
+[timer](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/timer.vhd) - odpočet času kola a pauzy, přičítání počtu kol
 
 ```vhdl
 library ieee;
@@ -447,10 +417,7 @@ end architecture behavioral;
 ```
 
 
-
-timer_7seg - nevím - source, který zobrazuje funkce na displeji
-
-https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/timer_7seg.vhd
+[timer_7seg](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/timer_7seg.vhd) - propojení všech předchozích designů
 
 ```vhdl
 library ieee;
@@ -575,9 +542,8 @@ end architecture behavioral;
 
 
 
-top - nevím - propojení všech funkcí k následnému použití na desce
+[top](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/top.vhd) - nevím - propojení všech funkcí k následnému použití na desce
 
-https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/top.vhd
 
 ```vhdl
 library ieee;
