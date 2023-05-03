@@ -1056,8 +1056,8 @@ Na snímcích obrazovky níže můžeme pozorovat, jak funguje náš časovač. 
 První 2 přepínače slouží k nastavení počtu kol, následující 3 přepínače slouží k nastavení délky kola a další 2 přepínače slouží k nastavení délky pauzy. Přepnutím přepínače do vrchní polohy přidáváme čas či počet kol. V každé sekci (počet kol, délka kola, délka pauzy) se vpravo nachází nejmenší možný přídavek kola / času a vlevo se nachází nejvyšší možný přídavek kol / času. Pro zvýšení požadovaného parametru musíme přepínač přepnout do vrchní polohy, naopak pro snížení musí přepínač zůstat ve spodní poloze.
 Jakmile jsme nastavili požadované údaje, odpočet lze spustit 15. přepínačem. Pokud jsme nechtěně nastavili špatný čas kola či počet kol, odpočet lze resetovat prostředním tlačítkem BTNC. Časovač se může hodit pro cvičení v sériích, nebo může posloužit jako "minutka" při vaření v kuchyni.
 
-Zde přikládáme video zobrazující výše popsané funkce:
-https://vutbr-my.sharepoint.com/:v:/g/personal/240856_vutbr_cz/EYHoxPQC865AsCj_t32AXCMBwtA-zDfYdiQmJR3evQSV4w?e=rZJxAk
+
+([https://www.google.com](https://vutbr-my.sharepoint.com/:v:/g/personal/240856_vutbr_cz/EYHoxPQC865AsCj_t32AXCMBwtA-zDfYdiQmJR3evQSV4w?e=rZJxAk) "Video zobrazující výše popsané funkce")
 
 ## References
 
