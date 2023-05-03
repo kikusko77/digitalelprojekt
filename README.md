@@ -261,7 +261,7 @@ end architecture behavioral;
 ```
 
 
-[hex_7seg](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/hex_7seg.vhd) - nevím - source se zobrazením času kola
+[hex_7seg](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/hex_7seg.vhd) - dekódování binární reprezentace víceciferného decimálního čísla na konkrétní hodnotu pro konkrétní 7 segmentový displej pomocí zbytku po dělení (zobrazování kola)
 
 ```vhdl
 library ieee;
