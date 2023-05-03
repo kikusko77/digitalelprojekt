@@ -337,7 +337,11 @@ end architecture behavioral;
 ```
 
 
-[timer](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/timer.vhd) - odpočet času kola a pauzy, přičítání počtu kol
+[timer](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/timer.vhd) 
+      - nastavování hodnot časovače před odpočtem
+      - samotný odpočet času kola a pauzy
+      - přičítání počtu kol
+      - reset
 
 ```vhdl
 library ieee;
@@ -414,7 +418,8 @@ end architecture behavioral;
 ```
 
 
-[timer_7seg](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/timer_7seg.vhd) - propojení všech předchozích designů
+[timer_7seg](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/timer_7seg.vhd) 
+- implementace všech předchozích designů
 
 ```vhdl
 library ieee;
@@ -539,7 +544,11 @@ end architecture behavioral;
 
 
 
-[top](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/top.vhd) - nevím - propojení všech funkcí k následnému použití na desce
+[top](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/top.vhd) 
+    - nastavování počtu kol (přednastavena 3 kola, možné nastavit 5 a 7 kol pomocí přepínačů SW(0) a SW(1))
+    - nastavení času kola (přednastaveno 30 sekund, možné nastavit 90, 180 nebo 240 sekund pomocí přepínačů SW (2), SW(3) a SW(4))
+    - nastavení času pauzy (přednastaveno na 20 sekund, možné nastavit 60 nebo 90 sekund pomocí přepínačů SW(5) a SW(6))
+    - rozmístění zobrazení údajů na osmi 7mi segmentových displejích
 
 
 ```vhdl
@@ -743,7 +752,7 @@ end architecture behavioral;
 
 
 
-tb_timer - nevím - testbench pro vytvořený časovač
+tb_timer - testbench pro timer
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/tb_timer.vhd
 
@@ -821,7 +830,7 @@ end architecture testbench;
 
 
 
-tb_timer_7seg - nevím - testbench pro 7mi segmentový displej
+tb_timer_7seg - testbench pro timer_7seg
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/tb_timer_7seg.vhd
 
@@ -908,7 +917,7 @@ end architecture behavioral;
 
 
 
-Constraint file - přiřazení switchů, tlačítek a displejů 
+Constraint file - přiřazení spínačů, tlačítek a displejů na desce 
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/constrs_1/imports/new/nexys-a7-50t.xdc
 
