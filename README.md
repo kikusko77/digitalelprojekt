@@ -1024,12 +1024,19 @@ set_property -dict { PACKAGE_PIN U13   IOSTANDARD LVCMOS33 } [get_ports { AN[7] 
 Na snímcích obrazovky níže můžeme pozorovat, jak funguje náš časovač. Při aktivaci tlačítka enable začne postupný odpočet kola. Jakmile kolo skončí, začne se odčítávat pauza. Po skončení pauzy se přičte počet kol a celý proces se opakuje.
 
 * simulace entity `timer` (ověření správného odečítání kola, pauzy a následného opakování)
+
 ![Capture](https://github.com/kikusko77/digitalelprojekt/blob/main/simulation%20images/timer_1.PNG)
+
 ![Capture](https://github.com/kikusko77/digitalelprojekt/blob/main/simulation%20images/timer_2.PNG)
 
+
+
 * simulace entity `timer_7seg` (ověření správného zobrazování, resp. posílání správné číslice na sedmi segmentové displeje)
+
 ![Capture](https://github.com/kikusko77/digitalelprojekt/blob/main/simulation%20images/nuber_decoding_to_7seg.PNG)
+
 ![Capture](https://github.com/kikusko77/digitalelprojekt/blob/main/simulation%20images/nuber_decoding_to_7seg_2.PNG)
+
 ![Capture](https://user-images.githubusercontent.com/95495159/235148465-c7c22338-cda8-4edf-b740-eeb164a91847.png)
 
 
