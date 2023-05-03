@@ -30,7 +30,8 @@ Po přepnutí patnáctého přepínače začne odečet kola. Po odečtení kola 
 Jakmile skončí odečtení pauzy, přičte se počet kol a odčítání kola opět začíná.
 
 ### Správné zobrazení všech údajů na displeji
-Pro správné zobrazení všech hodnot (počet kol, čas kola a čas pauzy) jsme vytvořili samostatné design sourcy, a v každém sourcu bylo definováno zobrazení na sedmibitovém displeji, počet cifer na displeji a počet čísel, který každá cifra bude ukazovat. Takže například v kódu pro zobrazení pauzy jsme definovali, že se bude zobrazovat na dvou 7mi segmentových displejích a každý displej bude ukazovat hodnoty 0 až 9.
+Pro správné zobrazení hodnot času kola a pauzy posíláme daná čísla do hex7_seg a 7seg_p, kde jsou čísla konvertována pomocí dalších funkcí na jednotlivé cifry. Tyto cifry jsou následně v jejich 7mi segmentových hodnotách posílány na 7mi segmentový displej.
+Takže například v kódu pro zobrazení pauzy jsme definovali, že se bude zobrazovat na dvou 7mi segmentových displejích a každý displej bude ukazovat hodnoty 0 až 9.
 
 ### Správná funkce resetu
 Pro tuto funkci jsme si zvolili tlačítko BTNC nad 7mi segmentovými displeji. Při zmáčknutí tlačítka BTNC se odpočet zastaví a displej se vynuluje.
@@ -39,9 +40,9 @@ Pro tuto funkci jsme si zvolili tlačítko BTNC nad 7mi segmentovými displeji. 
 Pro tuto funkci jsme si zvolili patnáctý přepínač. Při jeho sepnutí začne odpočet časovače podle zvoleného nastavení. Pokud jsme ponechali výchozí nastavení, tak se začnou odčítat 3 kola po 30 sekundách s 20 sekundovou pauzou.
 
 ### Nastavování údajů pomocí přepínačů
-Pro nastavování údajů jsme si pro každý údaj určili n-bitové číslo, konkrétně pro čas kola 10ti bitové číslo, pro čas pauzy 10ti bitové číslo a pro zobrazení kol 3 bitové číslo. Nejvyšší zobrazitelný čas kola je 300 sekund, nejvyšší možný čas pauzy je 99 sekund a nejvyšší počet kol je 7. 
-Tyto údaje můžeme nastavit pomocí přepínačů. První 2 přepínače zprava (SW(0), SW(1)) slouží k nastavení počtu kol. První přepínač zprava má hodnotu nejméně významného bitu a druhý přepínač zprava má hodnotu nejvíce významného bitu. Podobným způsobem funguje nastavení času kola následujícími třemi přepínači v pořadí (SW(2), SW(3), SW(4)) a úplně stejně to má i délka pauzy, která se nastavuje dalšími dvěmi přepínači (SW(5), SW(6)).
-Pomocí design souborů hex_7seg, 7seg_p a 7seg_k zvolený počet bitů dekódujeme na jednotlivé cifry, které jsou následně zobrazeny na displeji.
+Pro každou veličinu jsme si určili n-bitové číslo, konkrétně pro čas kola 10ti bitové číslo, pro čas pauzy 10ti bitové číslo a pro zobrazení kol 3 bitové číslo. Nejvyšší zobrazitelný čas kola je 300 sekund, nejvyšší možný čas pauzy je 99 sekund a nejvyšší počet kol je 7. 
+U každé veličiny budeme nastavovat číslo natural za pomocí přepínačů. První 2 přepínače zprava (SW(0), SW(1)) slouží k nastavení počtu kol. První přepínač zprava má nejměnší přírůst čísla natural a druhý přepínač zprava má nejvyšší přírůst čísla natural. Podobným způsobem funguje nastavení času kola následujícími třemi přepínači v pořadí (SW(2), SW(3), SW(4)) a úplně stejně to má i délka pauzy, která se nastavuje dalšími dvěmi přepínači (SW(5), SW(6)).
+Pomocí design souborů hex_7seg, 7seg_p a 7seg_k zvolenou hodnotu natural dekódujeme na jednotlivé cifry, které jsou následně zobrazeny na displeji.
 
 ## Hardware description of demo application
 
