@@ -1057,7 +1057,7 @@ První 2 přepínače slouží k nastavení počtu kol, následující 3 přepí
 Jakmile jsme nastavili požadované údaje, odpočet lze spustit 15. přepínačem. Pokud jsme nechtěně nastavili špatný čas kola či počet kol, odpočet lze resetovat prostředním tlačítkem BTNC. Časovač se může hodit pro cvičení v sériích, nebo může posloužit jako "minutka" při vaření v kuchyni.
 
 
-[I'm an inline-style link with title](https://vutbr-my.sharepoint.com/:v:/g/personal/240856_vutbr_cz/EYHoxPQC865AsCj_t32AXCMBwtA-zDfYdiQmJR3evQSV4w?e=rZJxAk)
+[Video zobrazující výše popsané funkce](https://vutbr-my.sharepoint.com/:v:/g/personal/240856_vutbr_cz/EYHoxPQC865AsCj_t32AXCMBwtA-zDfYdiQmJR3evQSV4w?e=rZJxAk)
 
 ## References
 
