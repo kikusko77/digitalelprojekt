@@ -1054,11 +1054,26 @@ Funkce timeru
 
 ## Instructions
 
-Časovač se zobrazuje v plné šíři osmi 7mi-segmentových číslic, v prvních 3 číslicích vpravo lze pozorovat délku kola, uprostřed se zobrazuje odpočítávání pauzy a úplně vlevo se zobrazuje pořadí kola. Časovač má předem nastavené 3 kola s délkou 30 sekund a pevně nastavenou pauzu 20 sekund. Počet kol, délku kola a délku pauzy lze nastavit pomocí přepínačů zprava doleva.
-První 2 přepínače slouží k nastavení počtu kol, následující 3 přepínače slouží k nastavení délky kola a další 2 přepínače slouží k nastavení délky pauzy. Přepnutím přepínače do vrchní polohy přidáváme čas či počet kol. V každé sekci (počet kol, délka kola, délka pauzy) se vpravo nachází nejmenší možný přídavek kola / času a vlevo se nachází nejvyšší možný přídavek kol / času. Pro zvýšení požadovaného parametru musíme přepínač přepnout do vrchní polohy, naopak pro snížení musí přepínač zůstat ve spodní poloze.
-Jakmile jsme nastavili požadované údaje, odpočet lze spustit 15. přepínačem. Pokud jsme nechtěně nastavili špatný čas kola či počet kol, odpočet lze resetovat prostředním tlačítkem BTNC. Časovač se může hodit pro cvičení v sériích, nebo může posloužit jako "minutka" při vaření v kuchyni.
+Časovač se zobrazuje na šesti 7mi-segmentových displejích, na prvních třech displejích vpravo lze pozorovat délku kola, uprostřed se zobrazuje odpočítávání pauzy a úplně vlevo se zobrazuje pořadí kola. Časovač má předem nastavené 3 kola s délkou 30 sekund a pevně nastavenou pauzu 20 sekund. Počet kol, délku kola a délku pauzy lze nastavit pomocí přepínačů zprava doleva. První 2 přepínače slouží k nastavení počtu kol, následující 3 přepínače slouží k nastavení délky kola a další 2 přepínače slouží k nastavení délky pauzy. Přepnutím přepínače do vrchní polohy přidáváme čas či počet kol. V každé sekci (počet kol, délka kola, délka pauzy) se vpravo nachází nejmenší možný přídavek kola / času a vlevo se nachází nejvyšší možný přídavek kol / času. Máme-li pro konkrétní parametr nastaveny všechny přepínače ve vrchní poloze, nastaví se nejvyšší možná hodnota pro tento parametr.
 
-Zde přikládáme video zobrazující výše popsané funkce:
+Nastavení počtu kol
+* SW(0) - 5 kol
+* SW(1) - 7 kol
+* (předem nastavená hodnota) - 3 kola
+
+Nastavení trvání kola
+* SW(2) - 90 sekund
+* SW(3) - 180 sekund
+* SW(4) - 240 sekund
+* (předem nastavená hodnota) - 30 sekund
+
+Nastavení trvání pauzy
+* SW(5) - 60 sekund
+* SW(6) - 90 sekund
+* (předem nastavená hodnota) - 20 sekund
+
+Jakmile jsme nastavili požadované údaje, odpočet lze spustit 15. přepínačem. Časovač se může hodit pro cvičení v sériích, nebo může posloužit jako "minutka" při vaření v kuchyni.
+
 https://vutbr-my.sharepoint.com/:v:/g/personal/240856_vutbr_cz/EYHoxPQC865AsCj_t32AXCMBwtA-zDfYdiQmJR3evQSV4w?e=rZJxAk
 
 ## References
