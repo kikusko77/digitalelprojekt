@@ -49,7 +49,8 @@ Deska obsahuje mnoho užitečných nástrojů pro využití v projektech, jako n
 
 ## Software description
 
-[7seg_k](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/7seg_k.vhd) - převod 3 bitového čísla na konkrétní hodnotu na 7 segmentovém dipleji (zobrazování počtu kol)
+[7seg_k](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/7seg_k.vhd)
+- převod 3 bitového čísla na konkrétní hodnotu na 7 segmentovém dipleji (zobrazování počtu kol)
 
 ```vhdl
 
@@ -115,7 +116,8 @@ end architecture behavioral;
 ```
 
 
-[7seg_p](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/7seg_p.vhd) - dekódování binární reprezentace víceciferného decimálního čísla na konkrétní hodnotu pro konkrétní 7 segmentový displej pomocí zbytku po dělení (zobrazování pauzy)
+[7seg_p](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/7seg_p.vhd)
+- dekódování binární reprezentace víceciferného decimálního čísla na konkrétní hodnotu pro konkrétní 7 segmentový displej pomocí zbytku po dělení (zobrazování pauzy)
 
 ```vhdl
 library ieee;
@@ -182,7 +184,8 @@ end architecture behavioral;
 ```
 
 
-[clock_enable](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/clock_enable.vhd) - spouštění odpočtu časovače, synchronní proces, zahrnutý reset
+[clock_enable](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/clock_enable.vhd)
+- spouštění odpočtu časovače, synchronní proces, zahrnutý reset
 
 ```vhdl
 ----------------------------------------------------------
@@ -261,7 +264,8 @@ end architecture behavioral;
 ```
 
 
-[hex_7seg](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/hex_7seg.vhd) - dekódování binární reprezentace víceciferného decimálního čísla na konkrétní hodnotu pro konkrétní 7 segmentový displej pomocí zbytku po dělení (zobrazování kola)
+[hex_7seg](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/hex_7seg.vhd) 
+- dekódování binární reprezentace víceciferného decimálního čísla na konkrétní hodnotu pro konkrétní 7 segmentový displej pomocí zbytku po dělení (zobrazování kola)
 
 ```vhdl
 library ieee;
@@ -338,10 +342,10 @@ end architecture behavioral;
 
 
 [timer](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/timer.vhd) 
-      - nastavování hodnot časovače před odpočtem
-      - samotný odpočet času kola a pauzy
-      - přičítání počtu kol
-      - reset
+- nastavování hodnot časovače před odpočtem
+- samotný odpočet času kola a pauzy
+- přičítání počtu kol
+- reset
 
 ```vhdl
 library ieee;
@@ -545,10 +549,10 @@ end architecture behavioral;
 
 
 [top](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/top.vhd) 
-    - nastavování počtu kol (přednastavena 3 kola, možné nastavit 5 a 7 kol pomocí přepínačů SW(0) a SW(1))
-    - nastavení času kola (přednastaveno 30 sekund, možné nastavit 90, 180 nebo 240 sekund pomocí přepínačů SW (2), SW(3) a SW(4))
-    - nastavení času pauzy (přednastaveno na 20 sekund, možné nastavit 60 nebo 90 sekund pomocí přepínačů SW(5) a SW(6))
-    - rozmístění zobrazení údajů na osmi 7mi segmentových displejích
+- nastavování počtu kol (přednastavena 3 kola, možné nastavit 5 a 7 kol pomocí přepínačů SW(0) a SW(1))
+- nastavení času kola (přednastaveno 30 sekund, možné nastavit 90, 180 nebo 240 sekund pomocí přepínačů SW (2), SW(3) a SW(4))
+- nastavení času pauzy (přednastaveno na 20 sekund, možné nastavit 60 nebo 90 sekund pomocí přepínačů SW(5) a SW(6))
+- rozmístění zobrazení údajů na osmi 7mi segmentových displejích
 
 
 ```vhdl
@@ -752,9 +756,8 @@ end architecture behavioral;
 
 
 
-tb_timer - testbench pro timer
-
-https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/tb_timer.vhd
+[tb_timer](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/tb_timer.vhd)
+- testbench pro timer
 
 ```vhdl
 library ieee;
@@ -830,9 +833,8 @@ end architecture testbench;
 
 
 
-tb_timer_7seg - testbench pro timer_7seg
-
-https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/tb_timer_7seg.vhd
+[tb_timer_7seg](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/tb_timer_7seg.vhd)
+- testbench pro timer_7seg
 
 ```vhdl
 library ieee;
@@ -917,9 +919,8 @@ end architecture behavioral;
 
 
 
-Constraint file - přiřazení spínačů, tlačítek a displejů na desce 
-
-https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/constrs_1/imports/new/nexys-a7-50t.xdc
+[Constraint file](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/constrs_1/imports/new/nexys-a7-50t.xdc)
+- přiřazení spínačů, tlačítek a displejů na desce 
 
 ```vhdl 
 ## Clock signal
