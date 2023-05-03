@@ -8,7 +8,7 @@
 * Christian Kuric
 * Jakub Raimr
 
-+ všichni se podíleli na tvoření kódu, implementace na desku a na dalších úkolech během hodin cvičení na počítači
+
 
 
 
@@ -56,7 +56,9 @@ Deska obsahuje mnoho užitečných nástrojů pro využití v projektech, jako n
 
 ## Software description
 
-7seg_k - převod čísla natural pro počet kol na sedmi-segmentový displej
+Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in `src` and `sim` folders.
+
+7seg_k - nevím - source, který slouží k počítání kol na displeji
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/7seg_k.vhd
 
@@ -135,7 +137,7 @@ end architecture behavioral;
 
 
 
-7seg_p - převod čísla natural pro čas pauzy na sedmi-segmentový displej
+7seg_p - nevím - source, který slouží k počítání času pauzy
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/7seg_p.vhd
 
@@ -205,7 +207,7 @@ end architecture behavioral;
 
 
 
-clock_enable - spouštění odpočtu časovače, synchronní proces, zahrnutý reset
+clock_enable - nevím - source se spouštěním odpočtu
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/clock_enable.vhd
 
@@ -287,7 +289,7 @@ end architecture behavioral;
 
 
 
-hex_7seg - převod čísla natural pro čas kola na sedmi-segmentový displej
+hex_7seg - nevím - source se zobrazením času kola
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/hex_7seg.vhd
 
@@ -366,11 +368,8 @@ end architecture behavioral;
 
 
 
-timer - nastavování hodnot časovače před odpočtem
-      - samotný odpočet času kola a pauzy
-      - přičítání počtu kol
-      - reset
-      
+timer - nevím - source, který obsahuje funkce odpočtu časovače
+
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/timer.vhd
 
 ```vhdl
@@ -449,7 +448,7 @@ end architecture behavioral;
 
 
 
-timer_7seg - implementace všech předchozích designů
+timer_7seg - nevím - source, který zobrazuje funkce na displeji
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/timer_7seg.vhd
 
@@ -576,10 +575,7 @@ end architecture behavioral;
 
 
 
-top - nastavování počtu kol (přednastavena 3 kola, možné nastavit 5 a 7 kol pomocí přepínačů SW(0) a SW(1))
-    - nastavení času kola (přednastaveno 30 sekund, možné nastavit 90, 180 nebo 240 sekund pomocí přepínačů SW (2), SW(3) a SW(4))
-    - nastavení času pauzy (přednastaveno na 20 sekund, možné nastavit 60 nebo 90 sekund pomocí přepínačů SW(5) a SW(6))
-    - rozmístění zobrazení údajů na osmi 7mi segmentových displejích
+top - nevím - propojení všech funkcí k následnému použití na desce
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/top.vhd
 
@@ -784,7 +780,7 @@ end architecture behavioral;
 
 
 
-tb_timer - testbench pro timer
+tb_timer - nevím - testbench pro vytvořený časovač
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/tb_timer.vhd
 
@@ -862,7 +858,7 @@ end architecture testbench;
 
 
 
-tb_timer_7seg - testbench pro timer_7seg
+tb_timer_7seg - nevím - testbench pro 7mi segmentový displej
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/tb_timer_7seg.vhd
 
@@ -949,7 +945,7 @@ end architecture behavioral;
 
 
 
-Constraint file - přiřazení spínačů, tlačítek a displejů na desce 
+Constraint file - přiřazení switchů, tlačítek a displejů 
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/constrs_1/imports/new/nexys-a7-50t.xdc
 
@@ -1025,21 +1021,23 @@ set_property -dict { PACKAGE_PIN U13   IOSTANDARD LVCMOS33 } [get_ports { AN[7] 
 
 ### Component(s) simulation
 
-Na snímku obrazovky níže můžeme pozorovat, jak funguje náš časovač. Při aktivaci tlačítka enable začne postupný odpočet kola. Jakmile kolo skončí, začne se odčítávat pauza. Po skončení pauzy se přičte počet kol a celý proces se opakuje.
+Na snímcích obrazovky níže můžeme pozorovat, jak funguje náš časovač. Při aktivaci tlačítka enable začne postupný odpočet kola. Jakmile kolo skončí, začne se odčítávat pauza. Po skončení pauzy se přičte počet kol a celý proces se opakuje.
+
+* simulace entity `timer` (ověření správného odečítání kola, pauzy a následného opakování)
+
+![Capture](https://github.com/kikusko77/digitalelprojekt/blob/main/simulation%20images/timer_1.PNG)
+
+![Capture](https://github.com/kikusko77/digitalelprojekt/blob/main/simulation%20images/timer_2.PNG)
+
+
+
+* simulace entity `timer_7seg` (ověření správného zobrazování, resp. posílání správné číslice na sedmi segmentové displeje)
+
+![Capture](https://github.com/kikusko77/digitalelprojekt/blob/main/simulation%20images/nuber_decoding_to_7seg.PNG)
+
+![Capture](https://github.com/kikusko77/digitalelprojekt/blob/main/simulation%20images/nuber_decoding_to_7seg_2.PNG)
 
 ![Capture](https://user-images.githubusercontent.com/95495159/235148465-c7c22338-cda8-4edf-b740-eeb164a91847.png)
-
-Dekódování čísla natural na 7mi segmentový displej
-
-![nuber_decoding_to_7seg_2](https://user-images.githubusercontent.com/95495159/235950013-8c056adc-2263-4192-8126-879b9554ac63.png)
-![nuber_decoding_to_7seg](https://user-images.githubusercontent.com/95495159/235950030-9104d4d1-4a25-4986-8b08-1ff6a3ef33b9.png)
-
-
-Funkce timeru
-
-![timer_1](https://user-images.githubusercontent.com/95495159/235950185-ddcb675e-79b8-4b59-af6e-9c06a15caefe.png)
-![timer_2](https://user-images.githubusercontent.com/95495159/235950238-50089a68-0459-49e8-b647-b5a1327b8a1f.png)
-
 
 
 ### Obvod projektu
@@ -1074,9 +1072,9 @@ Nastavení trvání pauzy
 
 Jakmile jsme nastavili požadované údaje, odpočet lze spustit 15. přepínačem. Časovač se může hodit pro cvičení v sériích, nebo může posloužit jako "minutka" při vaření v kuchyni.
 
-([https://www.google.com](https://vutbr-my.sharepoint.com/:v:/g/personal/240856_vutbr_cz/EYHoxPQC865AsCj_t32AXCMBwtA-zDfYdiQmJR3evQSV4w?e=rZJxAk) "Video zobrazující výše popsané funkce")
+
+[Video zobrazující výše popsané funkce](https://vutbr-my.sharepoint.com/:v:/g/personal/240856_vutbr_cz/EYHoxPQC865AsCj_t32AXCMBwtA-zDfYdiQmJR3evQSV4w?e=rZJxAk)
 
 ## References
 
 1. https://digilent.com/shop/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum/
-2. ...
