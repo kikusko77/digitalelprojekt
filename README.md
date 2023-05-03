@@ -58,7 +58,7 @@ Deska obsahuje mnoho užitečných nástrojů pro využití v projektech, jako n
 
 Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in `src` and `sim` folders.
 
-7seg_k - source, který slouží k počítání kol na displeji
+7seg_k - nevím - source, který slouží k počítání kol na displeji
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/7seg_k.vhd
 
@@ -137,7 +137,7 @@ end architecture behavioral;
 
 
 
-7seg_p - source, který slouží k počítání času pauzy
+7seg_p - nevím - source, který slouží k počítání času pauzy
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/7seg_p.vhd
 
@@ -207,7 +207,7 @@ end architecture behavioral;
 
 
 
-clock_enable - source se spouštěním odpočtu
+clock_enable - nevím - source se spouštěním odpočtu
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/clock_enable.vhd
 
@@ -289,7 +289,7 @@ end architecture behavioral;
 
 
 
-hex_7seg - source se zobrazením času kola
+hex_7seg - nevím - source se zobrazením času kola
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/hex_7seg.vhd
 
@@ -368,7 +368,7 @@ end architecture behavioral;
 
 
 
-timer - source, který obsahuje funkce odpočtu časovače
+timer - nevím - source, který obsahuje funkce odpočtu časovače
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/timer.vhd
 
@@ -448,7 +448,7 @@ end architecture behavioral;
 
 
 
-timer_7seg - source, který zobrazuje funkce na displeji
+timer_7seg - nevím - source, který zobrazuje funkce na displeji
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/timer_7seg.vhd
 
@@ -575,7 +575,7 @@ end architecture behavioral;
 
 
 
-top - propojení všech funkcí k následnému použití na desce
+top - nevím - propojení všech funkcí k následnému použití na desce
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/top.vhd
 
@@ -780,7 +780,7 @@ end architecture behavioral;
 
 
 
-tb_timer - testbench pro vytvořený časovač
+tb_timer - nevím - testbench pro vytvořený časovač
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/tb_timer.vhd
 
@@ -858,7 +858,7 @@ end architecture testbench;
 
 
 
-tb_timer_7seg - testbench pro 7mi segmentový displej
+tb_timer_7seg - nevím - testbench pro 7mi segmentový displej
 
 https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/tb_timer_7seg.vhd
 
