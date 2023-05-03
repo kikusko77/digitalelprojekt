@@ -49,9 +49,6 @@ Deska obsahuje mnoho užitečných nástrojů pro využití v projektech, jako n
 
 ## Software description
 
-Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in `src` and `sim` folders.
-
-
 [7seg_k](https://github.com/kikusko77/digitalelprojekt/blob/3943aa9c5cb736bb78a51a3be46713379b49007a/teoreticky%20final/project_4/project_4.srcs/sources_1/new/7seg_k.vhd) - převod 3 bitového čísla na konkrétní hodnotu na 7 segmentovém dipleji (zobrazování počtu kol)
 
 ```vhdl
