@@ -1046,7 +1046,7 @@ Nastavení trvání pauzy
 Jakmile jsme nastavili požadované údaje, odpočet lze spustit 15. přepínačem. Časovač se může hodit pro cvičení v sériích, nebo může posloužit jako "minutka" při vaření v kuchyni.
 
 
-[Video zobrazující výše popsané funkce](https://vutbr-my.sharepoint.com/:v:/g/personal/240856_vutbr_cz/EYHoxPQC865AsCj_t32AXCMBwtA-zDfYdiQmJR3evQSV4w?e=rZJxAk)
+[Video zobrazující výše popsané funkce](https://vutbr-my.sharepoint.com/personal/240856_vutbr_cz/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F240856%5Fvutbr%5Fcz%2FDocuments%2FIMG%5F6154%2Emov&parentview=1)
 
 ## References
 
