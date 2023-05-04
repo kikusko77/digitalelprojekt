@@ -671,7 +671,7 @@ begin
     mux_proc: process (CLK100MHZ)
     begin
         if rising_edge(CLK100MHZ) then
-            if count = 1000000 then
+            if count = 300000 then
                 count <= 0;
 
                 case digit_sel is
